@@ -1,0 +1,19 @@
+.Outcome {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	background-color: rgb(255, 255, 0);
+	border-radius: 40px;
+}
+
+.two,
+.four,
+.six,
+.eight,
+.zero {
+	color: rgb(255, 0, 0);
+}
+.counter{
+  color: rgb(0, 45, 248);
+}
