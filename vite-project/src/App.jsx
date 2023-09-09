@@ -1,20 +1,28 @@
-import { useState } from "react";
-import "./App.css";
-import Button from "./components/Button";
-import Outcome from "./components/OutCome";
+import React from "react";
+import { createRoot } from "react-dom";
+import Greeting_Card from "./components/Greeting_Card";
 
-function App() {
-	const [count, setCount] = useState(0);
+const students = [
+  {
+    name: "Dawid",
+  },
+  { name: "Natalia" },
+  {
+    name: "Anka",
+  },
+];
 
-	return (
-		<>
-			<h1>Klikaj</h1>
-			<div className="card">
-				<Button className="Button" setCount={setCount} />
-				<Outcome className="Outcome" count={count} />
-			</div>
-		</>
-	);
-}
 
-export default App;
+const App = (props) => {
+  console.log("props", props);
+  return (
+    <div>
+      {students.map((student) => (
+        <Greeting_Card name={`Hello ${student.name} `} />
+      ))}
+    </div>
+  );
+};
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);
